@@ -7,7 +7,7 @@ on:
     types: [ opened, synchronize ]
 
 jobs:
-  validation:
+  checks:
     runs-on: ubuntu-latest
 
     steps:
@@ -26,13 +26,13 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Run Lint
-        run: ./gradlew lintDebug
+        run: ./gradlew lint
 
       - name: Run Detekt
-        run: ./detekt
+        run: ./gradlew detekt
 
       - name: Run Unit Tests
-        run: ./gradlew testDebugUnitTest
+        run: ./gradlew test
 
       - name: Run Build
         run: ./gradlew build --no-daemon
