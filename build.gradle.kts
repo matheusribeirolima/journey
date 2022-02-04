@@ -21,7 +21,7 @@ tasks.withType<Detekt>().configureEach {
     buildUponDefaultConfig = true
     parallel = true
     reports {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
         html.required.set(true)
     }
 }
