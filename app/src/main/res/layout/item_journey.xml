@@ -1,8 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/item_padding_horizontal"
+    android:paddingTop="@dimen/item_padding_vertical">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/item_margin_start_space" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/item_margin_end_space" />
+
+    <View
+        android:id="@+id/vCircle"
+        android:layout_width="@dimen/item_circle_size"
+        android:layout_height="@dimen/item_circle_size"
+        android:background="@drawable/circle"
+        app:layout_constraintEnd_toStartOf="@+id/gStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:includeFontPadding="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/item_number_font_size"
+        app:layout_constraintBottom_toBottomOf="@+id/vCircle"
+        app:layout_constraintEnd_toEndOf="@+id/vCircle"
+        app:layout_constraintStart_toStartOf="@+id/vCircle"
+        app:layout_constraintTop_toTopOf="@+id/vCircle"
+        tools:text="28" />
+
+    <TextView
+        android:id="@+id/tvDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/gStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="DAY ONE" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/item_title_font_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/gEnd"
+        app:layout_constraintStart_toEndOf="@+id/gStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvDay"
+        tools:text="Congratulations!" />
+
+    <TextView
+        android:id="@+id/tvSubTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/gEnd"
+        app:layout_constraintStart_toEndOf="@+id/gStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        tools:text="Take a bow, rockstar!" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/iv_item_journey_content_description"
+        android:src="@drawable/ic_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vDivider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/item_divider_height"
+        android:layout_marginTop="@dimen/item_padding_vertical"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
