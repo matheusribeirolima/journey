@@ -20,18 +20,40 @@ android {
 
     buildFeatures.viewBinding = true
 
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
+    
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles("proguard-android-optimize.txt", "proguard-rules.pro")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+
+    val defaultDimension = "default"
+    flavorDimensions += defaultDimension
+    productFlavors {
+        create("free") {
+            dimension = defaultDimension
+        }
+        create("pro") {
+            dimension = defaultDimension
+            applicationIdSuffix = ".pro"
+        }
     }
-    kotlinOptions {
-        jvmTarget = "11"
+
+    sourceSets {
+        getByName("pro") {
+            res {
+                srcDirs("src/pro/res")
+            }
+        }
     }
 }
 

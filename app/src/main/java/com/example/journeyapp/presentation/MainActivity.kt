@@ -1,7 +1,8 @@
-package com.example.journeyapp
+package com.example.journeyapp.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.journeyapp.R
 
 class MainActivity : AppCompatActivity() {
 
