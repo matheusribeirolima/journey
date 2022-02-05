@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:paddingHorizontal="@dimen/item_padding_horizontal"
-    android:paddingTop="@dimen/item_padding_vertical">
+    android:paddingTop="@dimen/item_padding_vertical"
+    tools:context=".ui.JourneyViewHolder">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gStart"
@@ -47,10 +48,11 @@
         android:id="@+id/tvDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="true"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/gStart"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="DAY ONE" />
+        tools:text="day one" />
 
     <TextView
         android:id="@+id/tvTitle"
