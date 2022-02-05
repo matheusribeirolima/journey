@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">JourneyApp</string>
+    <string name="iv_item_journey_content_description">Journey clickable</string>
 </resources>

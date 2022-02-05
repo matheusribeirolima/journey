@@ -24,7 +24,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    
+
     kotlinOptions {
         jvmTarget = "11"
     }
@@ -77,6 +77,8 @@ dependencies {
     implementation(libs.hilt.view.model)
 
     implementation(libs.material)
+
+    implementation(libs.gson)
 
     testImplementation(libs.junit)
     testImplementation(libs.test.lifecycle)

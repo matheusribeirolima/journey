@@ -55,6 +55,8 @@ dependencyResolutionManagement {
 
             alias("material").to("com.google.android.material:material:1.5.0")
 
+            alias("gson").to("com.google.code.gson:gson:2.8.9")
+
             alias("junit").to("junit:junit:4.13.2")
             alias("test-lifecycle").to("androidx.arch.core:core-testing:2.1.0")
 
