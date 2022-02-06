@@ -8,6 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import java.io.FileNotFoundException
 import javax.inject.Inject
 
 @HiltViewModel
@@ -23,7 +24,7 @@ class MainViewModel @Inject constructor(
             try {
                 val journeys = journeyRepository.loadData("data.json")
                 _uiState.value = Result.Success(journeys.mapToViewJourney())
-            } catch (e: Exception) {
+            } catch (_: FileNotFoundException) {
                 _uiState.value = Result.Error("Error loading journeys")
             }
         }
