@@ -1,8 +1,9 @@
-package com.example.journeyapp.ui
+package com.example.journeyapp.presentation
 
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.journeyapp.databinding.ItemJourneyBinding
+import com.example.journeyapp.domain.Journey
 
 typealias OnClickJourney = (Journey) -> Unit
 

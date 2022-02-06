@@ -1,4 +1,4 @@
-package com.example.journeyapp.ui
+package com.example.journeyapp.domain
 
 sealed class Result<out T : Any> {
     data class Success<T : Any>(val result: T) : Result<T>()

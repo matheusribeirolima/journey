@@ -1,4 +1,4 @@
-package com.example.journeyapp.ui
+package com.example.journeyapp.domain
 
 data class Journey(
     val title: String,

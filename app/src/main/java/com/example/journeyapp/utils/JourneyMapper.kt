@@ -2,7 +2,7 @@ package com.example.journeyapp.utils
 
 import android.icu.text.MessageFormat
 import com.example.journeyapp.data.JourneyDTO
-import com.example.journeyapp.ui.Journey
+import com.example.journeyapp.domain.Journey
 
 fun List<JourneyDTO>.mapToViewJourney() = mapIndexed { index, journeyDTO ->
     val day = journeyDTO.day + 1

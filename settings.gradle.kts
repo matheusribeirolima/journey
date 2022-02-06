@@ -44,6 +44,8 @@ dependencyResolutionManagement {
             alias("constraint").to("androidx.constraintlayout:constraintlayout:2.1.3")
             alias("recycler").to("androidx.recyclerview:recyclerview:1.2.1")
             alias("activity").to("androidx.activity:activity-ktx:1.4.0")
+            alias("splash").to("androidx.core:core-splashscreen:1.0.0-beta01")
+            alias("material").to("com.google.android.material:material:1.5.0")
 
             alias("view-model").to("androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0")
             alias("lifecycle").to("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
@@ -52,8 +54,6 @@ dependencyResolutionManagement {
             alias("hilt-android").to("com.google.dagger:hilt-android:2.40.5")
             alias("hilt-compiler").to("com.google.dagger:hilt-android-compiler:2.40.5")
             alias("hilt-view-model").to("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
-
-            alias("material").to("com.google.android.material:material:1.5.0")
 
             alias("gson").to("com.google.code.gson:gson:2.8.9")
 

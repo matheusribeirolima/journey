@@ -1,9 +1,10 @@
-package com.example.journeyapp.ui
+package com.example.journeyapp.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.journeyapp.data.JourneyRepository
-import com.example.journeyapp.utils.mapToViewJourney
+import com.example.journeyapp.domain.Journey
+import com.example.journeyapp.domain.JourneyUseCase
+import com.example.journeyapp.domain.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -13,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    private val journeyRepository: JourneyRepository,
+    private val journeyUseCase: JourneyUseCase,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<Result<List<Journey>>>(Result.Loading)
@@ -22,8 +23,8 @@ class MainViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             try {
-                val journeys = journeyRepository.loadData("data.json")
-                _uiState.value = Result.Success(journeys.mapToViewJourney())
+                val journeys = journeyUseCase.loadData()
+                _uiState.value = Result.Success(journeys)
             } catch (_: FileNotFoundException) {
                 _uiState.value = Result.Error("Error loading journeys")
             }

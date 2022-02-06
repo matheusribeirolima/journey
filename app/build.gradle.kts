@@ -67,6 +67,8 @@ dependencies {
     implementation(libs.constraint)
     implementation(libs.recycler)
     implementation(libs.activity)
+    implementation(libs.splash)
+    implementation(libs.material)
 
     implementation(libs.view.model)
     implementation(libs.lifecycle)
@@ -75,8 +77,6 @@ dependencies {
     implementation(libs.hilt.android)
     kapt(libs.hilt.compiler)
     implementation(libs.hilt.view.model)
-
-    implementation(libs.material)
 
     implementation(libs.gson)
 

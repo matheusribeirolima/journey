@@ -1,10 +1,11 @@
-package com.example.journeyapp.ui
+package com.example.journeyapp.presentation
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.journeyapp.databinding.ItemJourneyBinding
+import com.example.journeyapp.domain.Journey
 import javax.inject.Inject
 
 class JourneyAdapter @Inject constructor() : RecyclerView.Adapter<JourneyViewHolder>() {

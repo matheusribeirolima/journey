@@ -3,7 +3,7 @@ package com.example.journeyapp.data
 import com.example.journeyapp.utils.FileReader
 import kotlinx.coroutines.delay
 
-private const val FAKE_NETWORK_CALL_DELAY = 3000L
+private const val FAKE_NETWORK_CALL_DELAY = 2000L
 
 class JourneyRepositoryImpl(
     private val fileReader: FileReader,

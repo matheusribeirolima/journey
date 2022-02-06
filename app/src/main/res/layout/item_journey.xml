@@ -9,7 +9,7 @@
     android:focusable="true"
     android:paddingHorizontal="@dimen/item_padding_horizontal"
     android:paddingTop="@dimen/item_padding_vertical"
-    tools:context=".ui.JourneyViewHolder">
+    tools:context=".presentation.JourneyViewHolder">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gStart"
