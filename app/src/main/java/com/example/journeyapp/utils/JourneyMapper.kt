@@ -3,22 +3,18 @@ package com.example.journeyapp.utils
 import android.icu.text.MessageFormat
 import com.example.journeyapp.data.JourneyDTO
 import com.example.journeyapp.ui.Journey
-import javax.inject.Inject
 
-class JourneyMapper @Inject constructor(
-    private val messageFormat: MessageFormat
-) {
-    fun mapToViewJourney(journeys: List<JourneyDTO>) = journeys.mapIndexed { index, journeyDTO ->
-        Journey(
-            title = journeyDTO.title,
-            subtitle = journeyDTO.subtitle,
-            day = journeyDTO.day.toString(),
-            literalDay = getLiteralDayByNumber(journeyDTO.day),
-            isDividerVisible = index < journeys.lastIndex
-        )
-    }
+fun List<JourneyDTO>.mapToViewJourney() = mapIndexed { index, journeyDTO ->
+    val day = journeyDTO.day + 1
+    Journey(
+        title = journeyDTO.title,
+        subtitle = journeyDTO.subtitle,
+        day = day.toString(),
+        literalDay = getLiteralDayByNumber(day),
+        isDividerVisible = index < this.lastIndex
+    )
+}
 
-    private fun getLiteralDayByNumber(day: Int): String {
-        return "day " + messageFormat.format(day)
-    }
+private fun getLiteralDayByNumber(day: Int): String {
+    return "day " + MessageFormat.format("{0,spellout,#}", day)
 }
