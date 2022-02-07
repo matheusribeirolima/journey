@@ -1,4 +1,4 @@
-# Journey App &middot; ![Pull requests](https://github.com/matheusribeirolima/journey/blob/main/.github/workflows/android.yml/badge.svg)
+# Journey App &middot; ![Pull requests](https://github.com/matheusribeirolima/journey/actions/workflows/android.yml/badge.svg)
 
 Android application that shows journeys
 
