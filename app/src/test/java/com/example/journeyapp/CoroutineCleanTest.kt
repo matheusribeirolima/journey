@@ -10,7 +10,7 @@ import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.BeforeEach
 
 @ExperimentalCoroutinesApi
-abstract class CoroutineCleanTest : CleanTest() {
+abstract class CoroutineCleanTest : CleanTest {
 
     internal val dispatcher = StandardTestDispatcher()
     internal val testScope = TestScope(dispatcher)

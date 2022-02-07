@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 import java.lang.reflect.Type
 
 @DisplayName("Given a JourneyDTOMapper")
-class JourneyDTOMapperTest : CleanTest() {
+class JourneyDTOMapperTest : CleanTest {
 
     private val gson = mockk<Gson>()
     private val jsonString = "[]"

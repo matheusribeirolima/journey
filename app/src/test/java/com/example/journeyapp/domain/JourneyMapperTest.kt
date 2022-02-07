@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertAll
 
 @DisplayName("Given a JourneyMapper")
-class JourneyMapperTest : CleanTest() {
+class JourneyMapperTest : CleanTest {
 
     private val journeyDTO = JourneyDTO(
         title = "title",
