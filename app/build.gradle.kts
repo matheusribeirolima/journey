@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("kotlin-kapt")
     id("dagger.hilt.android.plugin")
+    id("de.mannodermaus.android-junit5")
 }
 
 android {
@@ -71,7 +72,7 @@ dependencies {
     implementation(libs.material)
 
     implementation(libs.view.model)
-    implementation(libs.lifecycle)
+    implementation(libs.lifecycle.runtime)
     kapt(libs.lifecycle.compiler)
 
     implementation(libs.hilt.android)
@@ -80,11 +81,15 @@ dependencies {
 
     implementation(libs.gson)
 
-    testImplementation(libs.junit)
+    testImplementation(libs.junit.api)
+    testRuntimeOnly(libs.junit.engine)
+    testImplementation(libs.mockk)
     testImplementation(libs.test.lifecycle)
+    testImplementation(libs.test.coroutines)
 
     androidTestImplementation(libs.test.ext)
     androidTestImplementation(libs.test.espresso)
+    androidTestImplementation(libs.test.mockk)
     androidTestImplementation(libs.test.hilt)
     kaptAndroidTest(libs.hilt.compiler)
 }
