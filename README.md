@@ -1,12 +1,12 @@
-# Journey App
+# Journey App &middot; ![Pull requests](https://github.com/matheusribeirolima/journey/blob/main/.github/workflows/android.yml/badge.svg)
 
 Android application that shows journeys
 
 <p align="center">
-  <img src="images/defaultScreen.png" width="160">
-  <img src="images/coloredScreen.png" width="160">
-  <img src="images/defaultDarkScreen.png" width="160">
-  <img src="images/coloredDarkScreen.png" width="160">
+  <img src="images/defaultScreen.png" width="170">
+  <img src="images/coloredScreen.png" width="170">
+  <img src="images/defaultDarkScreen.png" width="170">
+  <img src="images/coloredDarkScreen.png" width="170">
 </p>
 
 ## Project characteristics
@@ -34,7 +34,7 @@ ecosystem.
       tests, linters and app assemble
 * Testing
     * [JUnit 5](https://junit.org/junit5/) - unit tests
-    * [Hilt Test](https://dagger.dev/hilt/testing) - instrumented tests 
+    * [Hilt Test](https://dagger.dev/hilt/testing) - instrumented tests
     * [Mockk](https://mockk.io/) - mocking framework
 * UI
     * [Material design](https://material.io/design)
